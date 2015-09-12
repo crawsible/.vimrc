@@ -14,9 +14,22 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'epmatsw/ag.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
+
+
+" COLORS AND SYNTAX
+syntax enable
+set background=dark
+colorscheme solarized
+
+set number
+set cursorline
+set hlsearch
+hi cursorline cterm=none
+hi cursorlinenr ctermfg=red
 
 
 " PLUGIN SETTINGS
@@ -33,15 +46,6 @@ let g:ctrlp_map = '<leader>f'
 "" NERDTree
 map \           :NERDTreeToggle<CR>
 map \|          :NERDTreeFind<CR>
-
-
-" WINDOW FORMATTING
-set number
-set cursorline
-set hlsearch
-hi LineNr ctermfg=darkgrey
-hi cursorline cterm=none
-hi cursorlinenr ctermfg=red
 
 
 " TEXT FORMATTING
