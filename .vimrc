@@ -29,7 +29,7 @@ set number
 set cursorline
 set hlsearch
 hi cursorline cterm=none
-hi cursorlinenr ctermfg=red
+hi cursorlinenr ctermfg=darkred
 
 
 " PLUGIN SETTINGS
