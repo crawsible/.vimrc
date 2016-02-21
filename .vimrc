@@ -40,7 +40,9 @@ hi Visual ctermbg=lightblue ctermfg=black
 
 
 " PLUGIN SETTINGS
+"" autocomplete
 if has('nvim')
+  " use deoplete
   let g:deoplete#enable_at_startup = 1
   let g:deoplete#enable_auto_select = 1
   let g:deoplete#enable_smart_case = 1
@@ -56,6 +58,7 @@ else
 
   inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 endif
+set completeopt-=preview
 
 
 "" vim go
