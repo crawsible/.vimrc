@@ -1,31 +1,32 @@
-set nocompatible
-filetype off
+if has('nvim')
+  call plug#begin('~/.config/nvim/plugged')
+else
+  call plug#begin('~/.vim/plugged')
+endif
 
+Plug 'nsf/gocode'
+Plug 'fatih/molokai'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'fatih/vim-go'
+Plug 'zchee/deoplete-go', { 'do': 'make' }
+Plug 'davidhalter/jedi-vim'
+Plug 'zchee/deoplete-jedi', { 'do': 'make' }
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'docunext/closetag.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'mhinz/vim-signify'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'epmatsw/ag.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-surround'
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+call plug#end()
 
-Plugin 'nsf/gocode'
-Plugin 'fatih/vim-go'
-Plugin 'fatih/molokai'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'zchee/deoplete-go'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
-Plugin 'mhinz/vim-signify'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'epmatsw/ag.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-
-
-call vundle#end()
 filetype plugin indent on
-
 
 " COLORS AND SYNTAX
 syntax enable
@@ -77,7 +78,7 @@ let mapleader = ","
 
 "" neocomplete/deoplete
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+inoremap <expr><Space> pumvisible() ? "\<C-y>\<Space>" : "\<Space>"
 
 "" vim-go
 au FileType go nmap <leader>rn <Plug>(go-rename)
