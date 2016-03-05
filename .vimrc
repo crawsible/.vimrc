@@ -12,6 +12,7 @@ Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'davidhalter/jedi-vim'
 Plug 'zchee/deoplete-jedi', { 'do': 'make' }
+Plug 'hynek/vim-python-pep8-indent'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'docunext/closetag.vim'
@@ -104,3 +105,4 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 "" go
 autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
