@@ -1,0 +1,2 @@
+Host github.com
+	IdentityFile /home/crawsible/.ssh/id_rsa_github
