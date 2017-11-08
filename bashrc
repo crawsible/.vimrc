@@ -7,33 +7,40 @@
 
 
 # ALIASES
+alias bashrc='vim ~/.bashrc'
 alias be='bundle exec'
 alias c='clear'
-alias cf-ruby='cf ssh -tt -c "export HOME=/home/vcap/app;source /home/vcap/app/.profile.d/ruby.sh;cd /home/vcap/app;/bin/bash"'
-alias ll='ls -asl --color=auto'
-alias ls='ls --color=auto'
-alias vim='nvim'
+alias ll='ls -aslhGF --color=auto'
+alias lplog='lpass login cojackson@pivotal.io'
+alias ls='ls -GF --color=auto'
+alias xcopy='xclip -sel clip'
+alias xpaste='xclip -sel clip -o'
+alias random='openssl rand -base64 32'
 
 
 # CHRUBY
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby ruby-2.3.3
+chruby 'ruby-2.4.2'
 
+# DIRENV -- http://direnv.net/
+eval "$(direnv hook bash)"
 
 # GOLANG
-export GOPATH=/home/crawsible/gopath
+export GOPATH="${HOME}/go"
 export PATH="/usr/local/go/bin:${PATH}:${GOPATH}/bin"
+export GO15VENDOREXPERIMENT=1
 
 
-# KEYBOARD
-setxkbmap -option caps:escape
+# GOOGLE CLOUD SDK
+source /opt/google-cloud-sdk/path.bash.inc
 
 
 # TERMINAL CONTROL
-export EDITOR='nvim'
-PS1='[\u@\h \W]\$ '
-TERM='xterm-256color'
+export EDITOR='vim'
+export LSCOLORS=ExFxBxDxCxegedabagacad
+export PS1='\[\e[0;32m\][\u@\[\e[0;30;44m\]\h\[\e[0;32m\] \W]\$\[\e[m\] '
+export TERM='xterm-256color'
 
 
 # Z
