@@ -1,0 +1,12 @@
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	st = status
+	ci = commit
+	co = checkout
+  su = submodule update --init --recursive
+[user]
+	name = Colin Jackson
+	email = colin.s.jackson90@gmail.com
+[url "git@github.com:"]
+  insteadOf = https://github.com/
