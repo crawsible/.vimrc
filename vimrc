@@ -4,26 +4,19 @@ else
   call plug#begin('~/.vim/plugged')
 endif
 
-Plug 'nsf/gocode'
 Plug 'fatih/molokai'
-Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/deoplete.nvim'
 Plug 'fatih/vim-go'
-Plug 'zchee/deoplete-go', { 'do': 'make' }
-Plug 'davidhalter/jedi-vim'
-Plug 'zchee/deoplete-jedi', { 'do': 'make' }
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'docunext/closetag.vim'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'epmatsw/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
+Plug 'ervandew/supertab'
 
 call plug#end()
 
@@ -42,27 +35,6 @@ hi Visual ctermbg=lightblue ctermfg=black
 
 
 " PLUGIN SETTINGS
-"" autocomplete
-if has('nvim')
-  " use deoplete
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#enable_auto_select = 1
-  let g:deoplete#enable_smart_case = 1
-  let g:deoplete#sources#syntax#min_keyword_length = 3
-  let g:deoplete#lock_buffer_name_pattern = '\*ku\*'
-else
-  " use neocomplete
-  let g:neocomplete#enable_at_startup = 1
-  let g:neocomplete#enable_auto_select = 1
-  let g:neocomplete#enable_smart_case = 1
-  let g:neocomplete#sources#syntax#min_keyword_length = 3
-  let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-  inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-endif
-set completeopt-=preview
-
-
 "" vim go
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
