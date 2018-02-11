@@ -28,12 +28,15 @@ eval "$(direnv hook bash)"
 
 # GOLANG
 export GOPATH="${HOME}/go"
-export PATH="/usr/local/go/bin:${PATH}:${GOPATH}/bin"
-export GO15VENDOREXPERIMENT=1
+export PATH="${PATH}:${GOPATH}/bin"
 
 
 # GOOGLE CLOUD SDK
 source /opt/google-cloud-sdk/path.bash.inc
+
+
+# TAB COMPLETION
+source ~/go/src/git.zx2c4.com/password-store/src/completion/pass.bash-completion
 
 
 # TERMINAL CONTROL
@@ -47,5 +50,5 @@ export TERM='xterm-256color'
 source /usr/local/share/z/z.sh
 
 
-# TAB COMPLETION
-source ~/go/src/git.zx2c4.com/password-store/src/completion/pass.bash-completion
+# UTILITIES
+export PATH="${HOME}/scripts:${PATH}"
