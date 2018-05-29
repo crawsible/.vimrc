@@ -21,7 +21,7 @@ alias random='openssl rand -base64 32'
 # CHRUBY
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby 'ruby-2.4.2'
+chruby 'ruby-2.5.1'
 
 # DIRENV -- http://direnv.net/
 eval "$(direnv hook bash)"
