@@ -32,7 +32,7 @@ export PATH="${PATH}:${GOPATH}/bin"
 
 
 # GOOGLE CLOUD SDK
-source /opt/google-cloud-sdk/path.bash.inc
+source /usr/share/google-cloud-sdk/completion.bash.inc
 
 
 # TAB COMPLETION
@@ -42,13 +42,8 @@ source ~/go/src/git.zx2c4.com/password-store/src/completion/pass.bash-completion
 # TERMINAL CONTROL
 export EDITOR='vim'
 export LSCOLORS=ExFxBxDxCxegedabagacad
-export PS1='\[\e[0;32m\][\u@\[\e[0;30;107m\]\h\[\e[0;32m\] \W]\$\[\e[m\] '
 export TERM='xterm-256color'
 
 
 # Z
 source /usr/local/share/z/z.sh
-
-
-# UTILITIES
-export PATH="${HOME}/scripts:${PATH}"
