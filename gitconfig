@@ -1,18 +1,18 @@
 [alias]
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	st = status
-	ci = commit
-	co = checkout
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  st = status
+  ci = commit
+  co = checkout
   su = submodule update --init --recursive
-	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+  serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
 [user]
-	name = Colin Jackson
-	email = colin.s.jackson90@gmail.com
-	signingkey = "167E0E45FE984E3CDD566791E2198A9E375B4B66"
+  name = Colin Jackson
+  email = colin.s.jackson90@gmail.com
+  signingkey = "167E0E45FE984E3CDD566791E2198A9E375B4B66"
 [url "git@github.com:"]
   insteadOf = https://github.com/
 [commit]
-	gpgsign = true
+  gpgsign = true
 [core]
-	excludesfile = /home/colin/.gitignore_global
+  excludesfile = /home/colin/.gitignore_global
