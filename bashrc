@@ -27,7 +27,8 @@ chruby 'ruby-2.5'
 
 # TERMINAL CONTROL
 export EDITOR='vim'
-export LSCOLORS=ExFxBxDxCxegedabagacad
+export LSCOLORS='ExFxBxDxCxegedabagacad'
+export PS1='\[\e[0;32m\][\u@\[\e[0;30;107m\]\h\[\e[0;32m\] \W]\$\[\e[m\] '
 export TERM='xterm-256color'
 export GPG_TTY=$(tty)
 

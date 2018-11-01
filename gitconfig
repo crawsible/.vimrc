@@ -13,6 +13,6 @@
 [url "git@github.com:"]
   insteadOf = https://github.com/
 [commit]
-  gpgsign = true
+  gpgsign = false
 [core]
   excludesfile = /home/colin/.gitignore_global
