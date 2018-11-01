@@ -18,10 +18,13 @@ export GOPATH="${HOME}/go"
 export PATH="${PATH}:${GOPATH}/bin"
 
 
+# GOOGLE CLOUD SDK
+if [ -f '/opt/google-cloud-sdk/path.bash.inc' ]; then source '/opt/google-cloud-sdk/path.bash.inc'; fi
+
+
 # CHRUBY
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-
 chruby 'ruby-2.5'
 
 

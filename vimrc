@@ -32,6 +32,7 @@ set hlsearch
 hi cursorline cterm=none
 hi cursorlinenr ctermfg=darkred
 hi Visual ctermbg=lightblue ctermfg=black
+set backspace=indent,eol,start
 
 
 " PLUGIN SETTINGS
