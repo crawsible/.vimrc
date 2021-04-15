@@ -1,22 +1,30 @@
 if has('nvim')
   call plug#begin('~/.config/nvim/plugged')
+
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
   call plug#begin('~/.vim/plugged')
+
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'docunext/closetag.vim'
+Plug 'epmatsw/ag.vim'
 Plug 'fatih/molokai'
 Plug 'fatih/vim-go'
 Plug 'hynek/vim-python-pep8-indent'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'docunext/closetag.vim'
-Plug 'mhinz/vim-signify'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'epmatsw/ag.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'mhinz/vim-signify'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
-Plug 'ervandew/supertab'
 
 call plug#end()
 
@@ -50,9 +58,26 @@ let g:go_highlight_operators = 1
 " KEY BINDINGS
 let mapleader = ","
 
-"" neocomplete/deoplete
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+
+
+"" deoplete
+let g:deoplete#enable_at_startup = 1
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><Space> pumvisible() ? "\<C-y>\<Space>" : "\<Space>"
+
+
+"" LanguageClient-vim
+let g:LanguageClient_serverCommands = {
+  \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio']
+  \ }
+nmap <silent>K <Plug>(lcn-hover)
+nmap <silent> gd <Plug>(lcn-definition)
+nmap <silent> <F2> <Plug>(lcn-rename)
+
 
 "" vim-go
 au FileType go nmap <leader>rn <Plug>(go-rename)
