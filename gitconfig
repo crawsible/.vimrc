@@ -15,4 +15,11 @@
 [commit]
   gpgsign = false
 [core]
-  excludesfile = /home/colin/.gitignore_global
+  excludesfile = ~/.gitignore_global
+[credential]
+  helper =
+[credential "https://git-codecommit.*.amazonaws.com"]
+  helper = !aws codecommit credential-helper $@
+  UseHttpPath = true
+[pull]
+  rebase = true
