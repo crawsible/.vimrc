@@ -13,6 +13,11 @@ alias vim='nvim'
 autoload zmv
 
 
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag -l'
+
+
 # RUBY
 eval "$(rbenv init -)"
 

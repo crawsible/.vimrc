@@ -10,13 +10,15 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+Plug 'AndrewRadev/tagalong.vim'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'docunext/closetag.vim'
-Plug 'epmatsw/ag.vim'
 Plug 'fatih/molokai'
 Plug 'fatih/vim-go'
 Plug 'hynek/vim-python-pep8-indent'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-signify'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
@@ -85,8 +87,40 @@ au FileType go nmap <leader>t <Plug>(go-alternate-edit)
 au FileType go nmap <leader>ts <Plug>(go-alternate-split)
 au FileType go nmap <leader>tv <Plug>(go-alternate-vertical)
 
-"" CtrlP
-let g:ctrlp_map = '<leader>f'
+
+"" Emmet
+let g:user_emmet_leader_key=','
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,scss,javascript,javascriptreact EmmetInstall
+
+
+"" Tagalong
+let g:tagalong_verbose = 1
+
+
+"" vim-surround
+let g:surround_indent = 1
+
+
+"" FZF
+nnoremap <silent> <leader>f :FZF<CR>
+" Customize fzf colors to match your color scheme
+" - fzf#wrap translates this to a set of `--color` options
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
 
 "" NERDTree
 map \           :NERDTreeToggle<CR>
@@ -98,9 +132,12 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set smartindent
 
 autocmd BufWritePre * :%s/\s\+$//e
 
 "" go
+
+autocmd FileType html setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
