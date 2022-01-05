@@ -25,10 +25,5 @@
 [user]
 	name = Colin Jackson
 	email = colin.jackson@shopify.com
-	signingkey = 44B8E8A7832C67D0A943E28C99AA87F63E7FBE8B
-[gpg]
-	program = /nix/var/nix/gcroots/dev-profiles/dev-support-dev-profile/bin/gpg-auto-pin
-[commit]
-	gpgSign = true
 [pull]
 	rebase = false
