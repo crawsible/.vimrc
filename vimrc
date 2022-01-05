@@ -1,17 +1,12 @@
 if has('nvim')
   call plug#begin('~/.config/nvim/plugged')
-
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
   call plug#begin('~/.vim/plugged')
-
-  Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
 Plug 'AndrewRadev/tagalong.vim'
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'docunext/closetag.vim'
 Plug 'fatih/molokai'
 Plug 'fatih/vim-go'
@@ -64,12 +59,6 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
-
-
-"" deoplete
-let g:deoplete#enable_at_startup = 1
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><Space> pumvisible() ? "\<C-y>\<Space>" : "\<Space>"
 
 
 "" LanguageClient-vim
