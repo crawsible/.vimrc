@@ -13,6 +13,10 @@ alias vim='nvim'
 autoload zmv
 
 
+# ASEPRITE
+export PATH="/Users/colinjackson/Library/Application Support/Steam/steamapps/common/Aseprite/Aseprite.app/Contents/MacOS:${PATH}"
+
+
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -l'

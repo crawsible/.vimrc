@@ -16,6 +16,7 @@
   gpgsign = false
 [core]
   excludesfile = ~/.gitignore_global
+	autocrlf = input
 [credential]
   helper =
 [credential "https://git-codecommit.*.amazonaws.com"]
@@ -23,3 +24,7 @@
   UseHttpPath = true
 [pull]
   rebase = true
+[push]
+  autoSetupRemote = true
+[init]
+	defaultBranch = main
