@@ -1,29 +1,17 @@
 [alias]
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lol = log --decorate --pretty=oneline --abbrev-commit -n 25
+  lola = log --decorate --pretty=oneline --abbrev-commit --all
   st = status
   ci = commit
   co = checkout
   su = submodule update --init --recursive
   serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
-[credential]
-	helper =
-	helper = store --file /opt/dev/var/private/git_credential_store
-[core]
-	commitGraph = true
-[diff]
-	algorithm = patience
-[gc]
-	writeCommitGraph = true
-[protocol]
-	version = 2
-[url "https://github.com/Shopify/"]
-	insteadOf = git@github.com:Shopify/
-	insteadOf = git@github.com:shopify/
-	insteadOf = ssh://git@github.com/Shopify/
-	insteadOf = ssh://git@github.com/shopify/
 [user]
 	name = Colin Jackson
 	email = colin.jackson@shopify.com
 [pull]
-	rebase = false
+  rebase = false
+[push]
+  autoSetupRemote = true
+[include]
+	path = /Users/crawsible/.config/dev/gitconfig
