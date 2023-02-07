@@ -6,7 +6,7 @@ if [[ $git_user = "" ]]
 then
   echo "specify the target user in the first argument"
   exit 1
-fi 
+fi
 
 dotfile="/Users/$USERNAME/dev/github.com/$git_user/dotfiles/gitconfig"
 

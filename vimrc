@@ -1,25 +1,12 @@
-if has('nvim')
-  call plug#begin('~/.config/nvim/plugged')
-else
-  call plug#begin('~/.vim/plugged')
-endif
-
-Plug 'AndrewRadev/tagalong.vim'
-Plug 'fatih/molokai'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'mhinz/vim-signify'
-Plug 'preservim/nerdcommenter'
-Plug 'preservim/nerdtree'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-surround'
-
-call plug#end()
-
 filetype plugin indent on
+syntax on
 
-" COLORS AND SYNTAX
-colorscheme molokai
+" COLORS
+if has("nvim")
+  colorscheme murphy
+else
+  colorscheme darkblue
+endif
 
 set number
 set cursorline
@@ -27,15 +14,14 @@ set hlsearch
 highlight cursorline cterm=none
 highlight cursorlinenr cterm=standout
 highlight Visual ctermbg=lightblue ctermfg=black
+
+
+" BEHAVIOR
 set backspace=indent,eol,nostop
 
 
-" CHECKHEALTH
-let g:loaded_perl_provider = 0
-
-
-" COMMAND REBINDINGS
-let mapleader = ","
+" REBINDINGS
+let mapleader = " "
 
 nnoremap ; :
 vnoremap ; :
@@ -49,26 +35,14 @@ vnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 vnoremap <C-L> <C-W>l
 
-command SV source $MYVIMRC
-
-
-"" FZF
-nnoremap <silent> <leader>f :FZF<CR>
-nnoremap <silent> <leader>a :Ag<CR>
-
-
-"" NERDTree
-map \ :NERDTreeToggle<CR>
-
 
 " TEXT FORMATTING
+
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set smartindent
-
-autocmd BufWritePre * :%s/\s\+$//e
 
 autocmd FileType html setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab

@@ -19,7 +19,11 @@ export PATH="${PATH}:/Users/c/Library/Application Support/Steam/steamapps/common
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag --hidden -l -g ""'
+export FZF_DEFAULT_COMMAND='ag --hidden --follow -l -g ""'
+
+
+# Itch.io
+export PATH="${PATH}:${HOME}/Library/Application Support/itch/apps/butler"
 
 
 # RUBY
