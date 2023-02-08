@@ -23,12 +23,16 @@ export FZF_DEFAULT_COMMAND='ag --hidden --follow -l -g ""'
 
 
 # Itch.io
-export PATH="${PATH}:${HOME}/Library/Application Support/itch/apps/butler"
+if [ -d "${HOME}/Library/Application Support/itch/app/butler" ]; then
+  export PATH="${PATH}:${HOME}/Library/Application Support/itch/apps/butler"
+fi
 
 
-# RUBY
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+# CHRUBY
+if [ -d "/opt/homebrew/opt/chruby/" ]; then
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+fi
 
 
 # TERMINAL CONTROL
@@ -40,7 +44,9 @@ export TERM='xterm-256color'
 
 # UNITY TOOLS
 editor_path="/Applications/Unity/Hub/Editor"
-export PATH="${PATH}:${editor_path}/$(ls -v "${editor_path}" | tail -n 1)Unity.app/Contents/Tools/"
+if [ -d "$editor_path" ]; then
+  export PATH="${PATH}:${editor_path}/$(ls -v "${editor_path}" | tail -n 1)Unity.app/Contents/Tools/"
+fi
 editor_path=
 
 

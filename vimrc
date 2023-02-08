@@ -2,9 +2,7 @@ filetype plugin indent on
 syntax on
 
 " COLORS
-if has("nvim")
-  colorscheme murphy
-else
+if !has("nvim")
   colorscheme darkblue
 endif
 
@@ -18,6 +16,8 @@ highlight Visual ctermbg=lightblue ctermfg=black
 
 " BEHAVIOR
 set backspace=indent,eol,nostop
+set splitbelow
+set splitright
 
 
 " REBINDINGS

@@ -17,6 +17,8 @@ vim.opt.rtp:prepend(lazypath)
 vim.cmd.source("~/.vimrc")
 
 require("lazy").setup("plugins")
+require("lsp.lua")
+require("lsp.ruby")
 
 -- plugin config
 vim.keymap.set("n", "<C-P>", ":FZF<CR>")
