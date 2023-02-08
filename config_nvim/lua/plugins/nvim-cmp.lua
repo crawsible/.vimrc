@@ -8,8 +8,9 @@ return {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-cmdline",
-		"saadparwaiz1/cmp_luasnip",
 		"L3MON4D3/LuaSnip",
+		"saadparwaiz1/cmp_luasnip",
+		"windwp/nvim-autopairs",
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -34,12 +35,14 @@ return {
 			mapping = cmp.mapping.preset.insert({
 				["<C-u>"] = cmp.mapping.scroll_docs(-4),
 				["<C-d>"] = cmp.mapping.scroll_docs(4),
-				-- C-b (back) C-f (forward) for snippet placeholder navigation.
 				["<C-Space>"] = cmp.mapping.complete(),
-				["<CR>"] = cmp.mapping.confirm({
-					behavior = cmp.ConfirmBehavior.Replace,
-					select = true,
-				}),
+				["<CR>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.confirm({ select = true })
+					else
+						fallback()
+					end
+				end),
 				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_next_item()

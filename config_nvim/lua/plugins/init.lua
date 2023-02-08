@@ -1,11 +1,10 @@
 return {
 	"AndrewRadev/tagalong.vim",
 	"folke/neodev.nvim",
-	"junegunn/fzf",
-	"junegunn/fzf.vim",
 	"mhinz/vim-signify",
 	"neovim/nvim-lspconfig",
+	"RRethy/nvim-treesitter-endwise",
+	"sainnhe/everforest",
 	"tpope/vim-commentary",
-	"tpope/vim-endwise",
 	"tpope/vim-surround",
 }

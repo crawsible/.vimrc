@@ -11,18 +11,19 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
+local lazy = require("lazy")
 
 -- load vim baseline
---   set mapleader needs to happen before lazy loads the plugins
+--  set mapleader needs to happen before lazy loads the plugins
 vim.cmd.source("~/.vimrc")
-
-require("lazy").setup("plugins")
-require("lsp.lua")
-require("lsp.ruby")
-
--- plugin config
-vim.keymap.set("n", "<C-P>", ":FZF<CR>")
-vim.keymap.set("n", "<C-F>", ":Ag<CR>")
-
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_perl_provider = 0
+
+lazy.setup("plugins", {
+	change_detection = {
+		notify = false,
+	},
+})
+
+require("lsp/config")
+require("colors/config")
