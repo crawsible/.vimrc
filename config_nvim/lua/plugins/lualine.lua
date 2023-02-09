@@ -11,10 +11,12 @@ return {
 		require("lualine").setup({
 			sections = {
 				lualine_c = {
-					"filename",
+					{ "filename", path = 1 },
 					{ navic.get_location, cond = navic.is_available },
 				},
-				lualine_x = { "require('lsp-status').status()" },
+				lualine_x = {
+					"require('lsp-status').status()",
+				},
 				lualine_y = {
 					"encoding",
 					"filetype",
