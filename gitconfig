@@ -19,9 +19,6 @@
 	autocrlf = input
 [credential]
   helper =
-[credential "https://git-codecommit.*.amazonaws.com"]
-  helper = !aws codecommit credential-helper $@
-  UseHttpPath = true
 [pull]
   rebase = true
 [push]
