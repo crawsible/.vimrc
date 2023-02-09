@@ -55,3 +55,11 @@ lspconfig.sorbet.setup({
 	end,
 	capabilities = capabilities,
 })
+
+lspconfig.rust_analyzer.setup({
+	on_attach = function(_, bufnr)
+		on_attach(_, bufnr)
+	end,
+	cmd = { "rustup", "run", "stable", "rust-analyzer" },
+	capabilities = capabilities,
+})
