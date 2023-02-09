@@ -25,10 +25,9 @@ end
 lspconfig.sumneko_lua.setup({
 	on_attach = function(client, bufnr)
 		on_attach(_, bufnr)
+
 		lsp_status.on_attach(client)
 		navic.attach(client, bufnr)
-
-		vim.cmd("autocmd BufWritePre <buffer> lua require('stylua-nvim').format_file()")
 	end,
 	settings = {
 		Lua = {

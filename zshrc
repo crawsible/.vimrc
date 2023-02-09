@@ -38,8 +38,7 @@ fi
 # TERMINAL CONTROL
 export EDITOR='nvim'
 export LSCOLORS='ExFxBxDxCxegedabagacad'
-export PS1=$'%{\e[4;31m%}%n%{\e[m%}@%{\e[0;33;45m%}%m%{\e[m%}%{\e[1;96m%} %~ %{\e[0;97m%}%#%{\e[m%} '
-export TERM='xterm-256color'
+export PS1=$'%{\e[1;3;32m%}%n%{\e[m%}@%{\e[0;97;100m%}%m%{\e[m%}%{\e[1;96m%} %~ %{\e[0;97m%}%#%{\e[m%} '
 
 
 # UNITY TOOLS

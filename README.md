@@ -1,5 +1,7 @@
 # installation instructions
 
+install "Mononoki Nerd Font Mono"
+
 - ln -s zshrc to ~/.zshrc
 - ln -s vimrc to ~/.vimrc
 - ln -s config_nvim to ~/.config/nvim

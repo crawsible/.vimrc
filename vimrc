@@ -27,12 +27,12 @@ nnoremap ; :
 vnoremap ; :
 
 nnoremap <C-H> <C-W>h
-vnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
-vnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
-vnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
+vnoremap <C-H> <C-W>h
+vnoremap <C-J> <C-W>j
+vnoremap <C-K> <C-W>k
 vnoremap <C-L> <C-W>l
 
 
