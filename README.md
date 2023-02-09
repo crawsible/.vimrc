@@ -14,3 +14,10 @@ add the following symlinks
 - ln -s gitconfig to ~/.gitconfig
 - ln -s gitignore_global to ~/.gitignore_global
 
+install command-line dependencies (maybe put these in plugin config someday)
+brew install the-silver-searcher
+brew install fzf
+brew install rust-init (or whatever)
+brew install lua-language-server (or whatever)
+pip3 install beautysh
+

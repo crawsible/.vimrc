@@ -18,6 +18,7 @@ return {
 				lualine_y = {
 					"encoding",
 					"filetype",
+					"progress",
 				},
 			},
 			options = {
