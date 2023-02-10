@@ -1,6 +1,6 @@
 local lsp_formatting = function()
 	vim.lsp.buf.format({
-		timeout_ms = 7500,
+		timeout_ms = 5000,
 		filter = function(client)
 			return client.name == "null-ls"
 		end,
@@ -18,8 +18,8 @@ return {
 		null_ls.setup({
 			sources = {
 				null_ls.builtins.formatting.beautysh,
-				null_ls.builtins.diagnostics.rubocop.with({ prefer_local = "bin" }),
-				null_ls.builtins.formatting.rubocop.with({ prefer_local = "bin" }),
+				null_ls.builtins.diagnostics.rubocop.with({ prefer_local = true }),
+				null_ls.builtins.formatting.rubocop.with({ prefer_local = true }),
 				null_ls.builtins.formatting.rustfmt,
 				null_ls.builtins.formatting.stylua,
 			},
