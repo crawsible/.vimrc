@@ -26,6 +26,8 @@ let mapleader = " "
 nnoremap ; :
 vnoremap ; :
 
+nnoremap <leader>c :let @+=expand('%:p')<CR>
+
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
