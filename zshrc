@@ -28,13 +28,6 @@ if [ -d "${HOME}/Library/Application Support/itch/app/butler" ]; then
 fi
 
 
-# CHRUBY
-if [ -d "/opt/homebrew/opt/chruby/" ]; then
-  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-fi
-
-
 # TERMINAL CONTROL
 export EDITOR='nvim'
 export LSCOLORS='ExFxBxDxCxegedabagacad'

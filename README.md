@@ -9,6 +9,23 @@ https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Mononoki
 on macos increase the maxfiles limit
 copy LaunchDaemons files to /Library/LaunchDaemons as root (sudo)
 
+get dependency and version mgmt tools up
+- brew
+  - https://brew.sh
+  - add source command to ~/.zshenv
+- chruby
+  - brew install chruby
+  - install latest ruby (ruby-install or something)
+  - add source command to ~/.zshenv and switch to latest
+- pyenv
+  - brew install pyenv
+  - follow github instructions to install to ~/.zshenv
+  - install latest python
+  - set pyenv global
+
+install z
+- brew install z
+
 add the following symlinks
 - ln -s kitty.conf to ~/.config/kitty/kitty.conf
 - ln -s zshrc to ~/.zshrc
@@ -29,5 +46,5 @@ for neo-tree fuzzy search:
 for null-ls formatting and diagnostics:
 - brew install stylua
 - brew install lua-language-server (or whatever)
-- pip3 install beautysh
+- pip install beautysh
 
