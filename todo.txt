@@ -1,1 +1,2 @@
 - update init.lua with the new nvim-lspconfig setting for lua
+- make an .ideavimrc
