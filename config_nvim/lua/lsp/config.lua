@@ -22,7 +22,7 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, bufopts)
 end
 
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
 	on_attach = function(client, bufnr)
 		on_attach(_, bufnr)
 
