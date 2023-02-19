@@ -16,7 +16,8 @@
   gpgsign = false
 [core]
   excludesfile = ~/.gitignore_global
-	autocrlf = input
+  autocrlf = input
+  sshCommand = ssh -i ~/.ssh/id_rsa-crawsible
 [credential]
   helper =
 [pull]
