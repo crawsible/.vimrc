@@ -18,8 +18,10 @@ export PATH="${PATH}:/Users/c/Library/Application Support/Steam/steamapps/common
 
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag --hidden --follow -l -g ""'
+if [ -f ~/.fzf.zsh ]; then
+    source ~/.fzf.zsh
+    export FZF_DEFAULT_COMMAND='ag --hidden --follow -l -g ""'
+fi
 
 
 # Itch.io
@@ -33,7 +35,7 @@ export EDITOR='nvim'
 export LSCOLORS='ExFxBxDxCxegedabagacad'
 
 setopt PROMPT_SUBST
-export PS1=$'%{\e[1;3;32m%}%n[$(git config user.name | awk \'{print $1}\')]%{\e[m%}@%{\e[0;97;100m%}%m%{\e[m%}%{\e[1;96m%} %~ %{\e[0;97m%}%#%{\e[m%} '
+export PS1=$'%-120(l#%{\e[1;3;32m%}%n[$(git config user.name | awk \'{print $1}\')]%{\e[m%}@%{\e[0;97;100m%}%m%{\e[m%}#@):%{\e[1;96m%}%-100(l#%~#./%1d)%{\e[0;97m%}%#%{\e[m%} '
 
 
 # UNITY TOOLS
