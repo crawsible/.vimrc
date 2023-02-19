@@ -49,3 +49,4 @@ set smartindent
 autocmd FileType html setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType zsh setlocal tabstop=4 shiftwidth=4 softtabstop=4
