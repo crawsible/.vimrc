@@ -1,0 +1,14 @@
+source ~/.vimrc
+
+set scrolloff=5
+set incsearch
+
+nmap gD <Action>(GotoDeclaration)
+nmap gd <Action>(GotoDeclaration)
+nmap K <Action>(ShowErrorDescription)
+
+nmap <leader>p <Action>(GotoFile)
+nmap <leader>P <Action>(GotoAction)
+nmap <leader>f <Action>(FindInPath)
+
+nmap <leader>b <Action>(ToggleLineBreakpoint)
