@@ -31,7 +31,9 @@ fi
 # TERMINAL CONTROL
 export EDITOR='nvim'
 export LSCOLORS='ExFxBxDxCxegedabagacad'
-export PS1=$'%{\e[1;3;32m%}%n%{\e[m%}@%{\e[0;97;100m%}%m%{\e[m%}%{\e[1;96m%} %~ %{\e[0;97m%}%#%{\e[m%} '
+
+setopt PROMPT_SUBST
+export PS1=$'%{\e[1;3;32m%}%n[$(git config user.name | awk \'{print $1}\')]%{\e[m%}@%{\e[0;97;100m%}%m%{\e[m%}%{\e[1;96m%} %~ %{\e[0;97m%}%#%{\e[m%} '
 
 
 # UNITY TOOLS
