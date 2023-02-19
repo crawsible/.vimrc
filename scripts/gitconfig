@@ -4,24 +4,24 @@ git_user=$1
 
 if [[ $git_user = "" ]]
 then
-  echo "specify the target user in the first argument"
-  exit 1
+    echo "specify the target user in the first argument"
+    exit 1
 fi
 
 dotfile="/Users/$USERNAME/dev/github.com/$git_user/dotfiles/gitconfig"
 
 if [[ ! -f $dotfile ]]
 then
-  echo "no gitconfig file at $dotfile"
-  exit 1
+    echo "no gitconfig file at $dotfile"
+    exit 1
 fi
 
 destination="/Users/$USERNAME/.gitconfig"
 
 if [[ -L $destination ]]
 then
-  echo "unlinking symlink at $destination"
-  unlink $destination
+    echo "unlinking symlink at $destination"
+    unlink $destination
 fi
 
 ln -s $dotfile $destination
