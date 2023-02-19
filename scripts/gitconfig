@@ -35,5 +35,6 @@ ssh_key="$ssh_directory/id_rsa-$git_user"
 echo "clearing existing ssh keys"
 ssh-add -d $ssh_directory/id_rsa-* 2> /dev/null
 
-echo "adding $ssh_key to ssh agent"
-ssh-add $ssh_key
+## specifying sshCommand in separate gitconfigs means we don't need to add our key to the agent
+# echo "adding $ssh_key to ssh agent"
+# ssh-add $ssh_key
