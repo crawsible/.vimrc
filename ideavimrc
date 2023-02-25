@@ -3,9 +3,13 @@ source ~/.vimrc
 set scrolloff=5
 set incsearch
 
-nmap gD <Action>(GotoDeclaration)
+nmap gn <Action>(ReSharperGotoNextErrorInSolution)
+nmap gN <Action>(ReSharperGotoPrevErrorInSolution)
+
 nmap gd <Action>(GotoDeclaration)
-nmap K <Action>(ShowErrorDescription)
+nmap gD <Action>(GotoDeclaration)
+nmap K <Action>(QuickJavaDoc)
+nmap <leader>k <Action>(QuickImplementations)
 
 nmap <leader>p <Action>(GotoFile)
 nmap <leader>P <Action>(GotoAction)
