@@ -43,9 +43,10 @@ for fzf.vim:
 for neo-tree fuzzy search:
 - brew install fd
 
-for null-ls formatting and diagnostics:
+for formatting and diagnostics:
 - brew install stylua
 - brew install lua-language-server (or whatever)
+- brew install kotlin-language-server
 - pip install beautysh
 - npm install -g typescript typescript-language-server
 

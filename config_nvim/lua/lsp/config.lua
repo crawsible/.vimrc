@@ -70,3 +70,10 @@ lspconfig.tsserver.setup({
 	end,
 	capabilities = capabilities,
 })
+
+lspconfig.kotlin_language_server.setup({
+	on_attach = function(_, bufnr)
+		on_attach(_, bufnr)
+	end,
+	capabilities = capabilities,
+})

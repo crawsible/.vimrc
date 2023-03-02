@@ -7,4 +7,5 @@ return {
 	"sainnhe/everforest",
 	"tpope/vim-commentary",
 	"tpope/vim-surround",
+	"udalov/kotlin-vim",
 }
