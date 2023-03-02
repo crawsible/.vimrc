@@ -47,4 +47,5 @@ for null-ls formatting and diagnostics:
 - brew install stylua
 - brew install lua-language-server (or whatever)
 - pip install beautysh
+- npm install -g typescript typescript-language-server
 

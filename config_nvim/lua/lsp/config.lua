@@ -63,3 +63,10 @@ lspconfig.rust_analyzer.setup({
 	cmd = { "rustup", "run", "stable", "rust-analyzer" },
 	capabilities = capabilities,
 })
+
+lspconfig.tsserver.setup({
+	on_attach = function(_, bufnr)
+		on_attach(_, bufnr)
+	end,
+	capabilities = capabilities,
+})
