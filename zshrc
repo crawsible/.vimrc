@@ -7,6 +7,7 @@ alias c='clear'
 alias ll='ls -aslhGF'
 alias ls='ls -GF'
 alias vim='nvim'
+alias ruby-http='ruby -run -e httpd -- . -p 3000'
 
 
 # AUTOLOADS
