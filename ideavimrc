@@ -17,3 +17,5 @@ nmap <leader>f <Action>(FindInPath)
 
 nmap <leader>d <Action>(Debug)
 nmap <leader>b <Action>(ToggleLineBreakpoint)
+
+nmap \ <Action>(ActivateProjectToolWindow)
