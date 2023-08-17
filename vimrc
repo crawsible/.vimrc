@@ -23,9 +23,6 @@ set splitright
 " REBINDINGS
 let mapleader = " "
 
-nnoremap ; :
-vnoremap ; :
-
 nnoremap <leader>c :let @+=expand('%:p')<CR>
 
 nnoremap <C-H> <C-W>h
