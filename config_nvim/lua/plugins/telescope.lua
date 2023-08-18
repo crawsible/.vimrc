@@ -13,6 +13,7 @@ return {
 			{ "<leader>f", require("telescope.builtin").live_grep },
 			{ "gr", require("telescope.builtin").lsp_references },
 			{ "<leader>t", require("telescope.builtin").treesitter },
+			{ "<leader>gs", require("telescope.builtin").git_status },
 		}
 	end,
 	opts = {
