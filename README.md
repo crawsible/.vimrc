@@ -37,7 +37,6 @@ add the following symlinks
 install command-line dependencies (maybe put these in plugin config someday)
 
 for fzf.vim:
-- brew install the-silver-searcher
 - brew install fzf
 
 for telescope and neo-tree fuzzy search:

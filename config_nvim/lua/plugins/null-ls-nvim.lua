@@ -1,12 +1,3 @@
-local lsp_formatting = function()
-	vim.lsp.buf.format({
-		timeout_ms = 5000,
-		filter = function(client)
-			return client.name == "null-ls"
-		end,
-	})
-end
-
 return {
 	"jose-elias-alvarez/null-ls.nvim",
 	dependencies = {
@@ -14,6 +5,7 @@ return {
 	},
 	config = function()
 		local null_ls = require("null-ls")
+		local lsp_format = require("lsp-format")
 
 		null_ls.setup({
 			sources = {
@@ -23,10 +15,9 @@ return {
 				null_ls.builtins.formatting.rustfmt,
 				null_ls.builtins.formatting.stylua,
 			},
-		})
-
-		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-			callback = lsp_formatting,
+			on_attach = function(client)
+				lsp_format.on_attach(client)
+			end,
 		})
 	end,
 }
