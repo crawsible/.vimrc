@@ -40,7 +40,8 @@ for fzf.vim:
 - brew install the-silver-searcher
 - brew install fzf
 
-for neo-tree fuzzy search:
+for telescope and neo-tree fuzzy search:
+- brew install ripgrep
 - brew install fd
 
 for formatting and diagnostics:

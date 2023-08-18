@@ -1,7 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	branch = "0.1.x",
-	dependendencies = {
+	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"sharkdp/fd",
 		"nvim-treesitter/nvim-treesitter",

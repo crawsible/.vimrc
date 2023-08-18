@@ -18,8 +18,8 @@ return {
 		null_ls.setup({
 			sources = {
 				null_ls.builtins.formatting.beautysh,
-				null_ls.builtins.diagnostics.rubocop.with({ prefer_local = true }),
-				null_ls.builtins.formatting.rubocop.with({ prefer_local = true }),
+				null_ls.builtins.diagnostics.rubocop.with({ prefer_local = "bin" }),
+				null_ls.builtins.formatting.rubocop.with({ prefer_local = "bin" }),
 				null_ls.builtins.formatting.rustfmt,
 				null_ls.builtins.formatting.stylua,
 			},
