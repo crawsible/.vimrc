@@ -12,12 +12,15 @@ return {
 			auto_install = true,
 			ignore_install = { "javascript" },
 			modules = {},
+			highlight = {
+				enable = true,
+				additional_vim_regex_highlighting = true,
+			},
+			folding = { enable = true },
+			indent = { enable = true },
 			endwise = {
 				enable = true,
 			},
-			highlight = { enable = true },
-			folding = { enable = true },
-			indent = { enable = true },
 			hidesig = {
 				enable = true,
 				opacity = 0.66,
