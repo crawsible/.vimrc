@@ -23,6 +23,7 @@ return {
 				preview_height = 0.67,
 				width = 0.9375,
 			},
+			path_display = { "smart" },
 		},
 		pickers = {},
 	},
