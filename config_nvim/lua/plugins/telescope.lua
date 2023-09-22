@@ -9,11 +9,11 @@ return {
 	},
 	keys = function()
 		return {
-			{ "<C-F>", require("telescope.builtin").live_grep },
-			{ "<leader>f", require("telescope.builtin").live_grep },
-			{ "gr", require("telescope.builtin").lsp_references },
-			{ "<leader>t", require("telescope.builtin").treesitter },
-			{ "<leader>gs", require("telescope.builtin").git_status },
+			{ "<C-F>", '<cmd>lua require("telescope.builtin").live_grep()<cr>' },
+			{ "<leader>f", '<cmd>lua require("telescope.builtin").live_grep()<cr>' },
+			{ "gr", '<cmd>lua require("telescope.builtin").lsp_references()<cr>' },
+			{ "<leader>t", '<cmd>lua require("telescope.builtin").treesitter()<cr>' },
+			{ "<leader>gs", '<cmd>lua require("telescope.builtin").git_status()<cr>' },
 		}
 	end,
 	opts = {
@@ -23,7 +23,10 @@ return {
 				preview_height = 0.67,
 				width = 0.9375,
 			},
-			path_display = { "smart" },
+			path_display = {
+				shorten = 3,
+				"truncate",
+			},
 		},
 		pickers = {},
 	},

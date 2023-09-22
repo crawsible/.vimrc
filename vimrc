@@ -9,6 +9,9 @@ if !has("nvim")
   colorscheme darkblue
 endif
 
+" LEADER REBINDING
+let mapleader = " "
+
 set number
 set cursorline
 set hlsearch
@@ -24,7 +27,6 @@ set splitright
 
 
 " REBINDINGS
-let mapleader = " "
 
 nnoremap <leader>c :let @+=expand('%:p')<CR>
 
