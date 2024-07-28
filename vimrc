@@ -57,3 +57,6 @@ autocmd FileType sh setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
+" FILE IDENTIFICATION
+let g:c_syntax_for_h = 1
+

@@ -76,3 +76,12 @@ lspconfig.kotlin_language_server.setup({
 	end,
 	capabilities = capabilities,
 })
+
+lspconfig.clangd.setup({
+	name = "clangd",
+	cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose" },
+	on_attach = function(_, bufnr)
+		on_attach(_, bufnr)
+	end,
+	capabilities = capabilities,
+})
