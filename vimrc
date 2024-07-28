@@ -52,4 +52,8 @@ autocmd FileType html setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType zsh setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType bash setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType sh setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType c setlocal tabstop=4 shiftwidth=4 softtabstop=4
 

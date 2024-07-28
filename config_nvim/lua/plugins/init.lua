@@ -1,7 +1,6 @@
 return {
 	"AndrewRadev/tagalong.vim",
 	"folke/neodev.nvim",
-	"github/copilot.vim",
 	"lukas-reineke/lsp-format.nvim",
 	"mhinz/vim-signify",
 	"neovim/nvim-lspconfig",
