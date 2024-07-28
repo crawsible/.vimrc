@@ -21,7 +21,7 @@ export PATH="${PATH}:/Users/c/Library/Application Support/Steam/steamapps/common
 # FZF
 if [ -f ~/.fzf.zsh ]; then
     source ~/.fzf.zsh
-    export FZF_DEFAULT_COMMAND='ag --hidden --follow -l -g ""'
+    export FZF_DEFAULT_COMMAND='ag --hidden --ignore ".git/*" --follow -l -g ""'
 fi
 
 
